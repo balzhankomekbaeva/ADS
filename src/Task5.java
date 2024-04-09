@@ -1,9 +1,10 @@
+import java.util.Scanner;
 public class Task5 {
-    public static int[] ReverseSequence(int[] arr, int n){
-        int[] array = new int[n];
-        for (int i = n-1; i >= 0; i--){
-            array[n - 1 - i] = arr[i];
-        }
-        return array;
+    public static void reverse(int n, Scanner scan){
+        if (n == 0)
+            return;
+        int seq = scan.nextInt();
+        reverse(n-1, scan);
+        System.out.print(seq + " ");
     }
 }

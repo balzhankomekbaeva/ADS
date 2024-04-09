@@ -1,8 +1,9 @@
 public class Task4 {
-    public static double SumOfPowers(int b, int n){
-        if(n==0) return 1;
-        else{
-            return SumOfPowers(b, n-1) + Math.pow(b, n);
+    public static int sumOfPowers(int base, int n, int exponent) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return (int) Math.pow(base, exponent) + sumOfPowers(base, n - 1, exponent + 1);
         }
     }
 }
